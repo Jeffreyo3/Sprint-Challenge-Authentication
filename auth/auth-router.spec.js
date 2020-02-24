@@ -36,6 +36,7 @@ describe('auth-router POST to /login', () => {
         const res = await request(server)
             .post('/api/auth/login')
             .send({ username: "michael", password: "coolpassword" });
+
         expect(res.status).toBe(200);
     });
 
@@ -43,6 +44,7 @@ describe('auth-router POST to /login', () => {
         const res = await request(server)
             .post('/api/auth/login')
             .send({ username: "michael", password: "coolpassword" });
+
         expect(res.body).toHaveProperty("token");
     })
 })
