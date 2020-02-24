@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Authentication Sprint Challenge",
   "main": "index.js",
+  "jest": {
+    "testEnvironment": "node"
+  },
   "scripts": {
     "test": "cross-env DB_ENV=test jest --watch",
     "server": "cross-env NODE_ENV=development nodemon index.js",
@@ -40,8 +43,5 @@
     "jest": "^25.1.0",
     "nodemon": "^2.0.2",
     "supertest": "^4.0.2"
-  },
-  "jest": {
-    "testEnvironment": "node"
   }
 }
