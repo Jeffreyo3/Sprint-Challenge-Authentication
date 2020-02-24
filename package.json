@@ -12,7 +12,11 @@
     "type": "git",
     "url": "git+https://github.com/LambdaSchool/Sprint-Challenge-Authentication.git"
   },
-  "keywords": [],
+  "keywords": [
+    "node",
+    "jest",
+    "testing"
+  ],
   "author": "Lambda School",
   "license": "ISC",
   "bugs": {

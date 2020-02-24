@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 // Import secret to use for JWT
 const secret = require('../config/secret');
 // User must create a config folder containing a file 
-// secrets.js must contain an object with the secret key titled jwtSecret
+// secret.js must contain an object with the secret key titled jwtSecret
 
 const User = require('../models/authModel');
 
