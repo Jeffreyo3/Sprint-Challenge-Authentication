@@ -11,6 +11,9 @@ describe('server.js', () => {
 
 
 describe('auth-router POST to /register', () => {
+    beforeEach(() => {
+        db("users").truncate();
+    });
     test("registers user successfully with a 201 response", async () => {
         await db.seed.run();
         const res = await request(server)
@@ -31,6 +34,9 @@ describe('auth-router POST to /register', () => {
 });
 
 describe('auth-router POST to /login', () => {
+    beforeEach(() => {
+        db("users").truncate();
+    });
 
     test("login user successful with a 200 response", async () => {
         const res = await request(server)

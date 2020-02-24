@@ -8,7 +8,7 @@ describe("jokes-router GET at /api/jokes", () => {
         await db("users").truncate();
         let res = await request(server)
             .post("/api/auth/register")
-            .send({ username: "michael", password: "coolpassword" });
+            .send({ username: "michael2", password: "coolpassword2" });
         token = res.body.token;
     });
 
