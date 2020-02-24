@@ -38,13 +38,22 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] What is the purpose of using _sessions_?
+- [x] What is the purpose of using _sessions_?
 
-- [ ] What does bcrypt do to help us store passwords in a secure manner.
+    Sessions provide a way to preserve data across requests.
+    Sessions keeps the user from being required to enter credentials on every new server request they initiate.
 
-- [ ] What does bcrypt do to slow down attackers?
+- [x] What does bcrypt do to help us store passwords in a secure manner.
 
-- [ ] What are the three parts of the JSON Web Token?
+    Bcrypt provides a way to keep a user's credentials secret by hashing info through a 1-way algorithm making it impossible to reverse back into the password.
+
+- [x] What does bcrypt do to slow down attackers?
+
+    Bcrypt's hashing algorithm runs the password through multiple times using multiple different parameters. In order for an attacker to decrypt the hash, they will need to know the algorithm used, the hash, a secret, and how many rounds the information went through the hash prior to the end result hash.
+
+- [x] What are the three parts of the JSON Web Token?
+
+    Header, Signature, and Payload
 
 ## Minimum Viable Product
 
@@ -52,7 +61,7 @@ Implement an User Authentication System. Hash user's passwords before saving the
 
 - [x] Implement the `register` and `login` functionality inside `/auth/auth-router.js`. A `user` has `username` and `password`. Both properties are required.
 - [x] Implement the `authenticate` middleware inside `/auth/authenticate-middleware.js`.
-- [ ] Write a **minimum of 2 tests** per API endpoint. Write more tests if you have time.
+- [x] Write a **minimum of 2 tests** per API endpoint. Write more tests if you have time.
 
 **Note**: the database already has the users table, but if you run into issues, the migrations are available.
 
